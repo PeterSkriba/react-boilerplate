@@ -40,9 +40,10 @@ module.exports = {
     publicPath: '/',
   },
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    hot: true,
-    inline: true,
+    static: {
+      directory: path.resolve(__dirname, 'public'),
+    },
+    hot: 'only',
     historyApiFallback: true,
   },
   plugins: [
