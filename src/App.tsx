@@ -1,13 +1,15 @@
 import React from 'react'
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Navigate, useRoutes } from 'react-router-dom'
 
-import { Home } from 'pages'
+import routes from 'config/routes'
 
-const App = () => (
-  <Switch>
-    <Route path="/" exact component={Home} />
-    <Redirect from="*" to="/" />
-  </Switch>
-)
+const App = () =>
+  useRoutes([
+    ...routes,
+    {
+      path: '*', // "No Match" route
+      element: <Navigate to="/" />,
+    },
+  ])
 
 export default App

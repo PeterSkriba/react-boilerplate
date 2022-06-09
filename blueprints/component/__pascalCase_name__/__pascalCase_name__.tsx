@@ -1,9 +1,13 @@
 import React from 'react'
 
+import { Box, Text } from 'ui'
+
 import * as S from './styled'
 
-const {{pascalCase name}} = () => (
+type TProps = {}
+
+const {{pascalCase name}} = ({}: TProps) => (
   <S.Wrapper>{{pascalCase name}}</S.Wrapper>
 )
 
-export default {{pascalCase name}}
+export default React.memo({{pascalCase name}})

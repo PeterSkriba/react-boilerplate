@@ -10,7 +10,7 @@
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "esModuleInterop": true,
-    "target": "es2017",
+    "target": "esnext",
     "noEmit": true,
     "jsx": "react",
     "skipLibCheck": true,
