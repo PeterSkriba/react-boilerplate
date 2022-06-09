@@ -8,9 +8,9 @@ import theme from 'styles/theme'
 import GlobalStyles from 'styles/global'
 
 const container = document.getElementById('root')
-const { render } = createRoot(container!)
+const root = createRoot(container!)
 
-render(
+root.render(
   <ThemeProvider {...{ theme }}>
     <BrowserRouter>
       <App />

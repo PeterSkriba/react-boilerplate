@@ -1,4 +1,5 @@
 import React from 'react'
+import { RouteObject } from 'react-router'
 
 // Layouts
 import { Main } from 'layouts'
@@ -8,8 +9,8 @@ import { Home } from 'pages'
 
 export default [
   {
-    path: '/',
+    path: '',
     element: <Main />,
-    children: [{ path: '/', element: <Home /> }],
+    children: [{ index: true, element: <Home /> }],
   },
-]
+] as RouteObject

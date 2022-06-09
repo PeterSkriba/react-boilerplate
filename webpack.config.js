@@ -19,6 +19,8 @@ module.exports = {
 
   entry: ['./src/index.tsx'],
 
+  devtool: 'source-map',
+
   module: {
     rules: [
       {
@@ -58,6 +60,18 @@ module.exports = {
     hot: 'only',
     historyApiFallback: true,
   },
+
+  addons: [
+    {
+      name: '@storybook/addon-docs',
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null,
+        transcludeMarkdown: true,
+      },
+    },
+  ],
 
   plugins: [
     new HtmlWebpackPlugin({

@@ -2,12 +2,17 @@ import React from 'react'
 
 import { ThemeProvider } from 'styled-components'
 
+import theme from '../src/styles/theme'
+import GlobalStyles from '../src/styles/global'
+
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme="default">
-      <div style={{ margin: '3em' }}>
+    <ThemeProvider {...{ theme }}>
+      <main style={{ margin: '3em' }}>
         <Story />
-      </div>
+      </main>
+
+      <GlobalStyles />
     </ThemeProvider>
   ),
 ]
